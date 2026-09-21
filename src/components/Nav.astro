@@ -1,5 +1,6 @@
 ---
 import { site } from '../data/site';
+const base = site.siteBase;
 const links = [
   { href: '#about', label: '关于' },
   { href: '#experience', label: '经历' },
@@ -17,7 +18,7 @@ const links = [
       ))}
     </div>
     <a
-      href={site.resumeUrl}
+      href={`${base}/resume.pdf`}
       class="rounded-lg bg-brand-600 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-brand-700"
     >简历</a>
   </nav>

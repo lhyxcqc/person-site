@@ -1,5 +1,5 @@
 // 站点级配置：改这里即可调整个人信息、技能、社交链接
-// 工作经历 / 精选项目不在此文件，见 src/content/experiences、src/content/projects
+// 工作经历 / 精选项目不在此文件，见 src/content/{experiences,projects}
 
 export interface SkillGroup {
   category: string;
@@ -14,10 +14,10 @@ export interface SocialLink {
 export interface SiteConfig {
   name: string;
   title: string;
+  siteBase: string;
   tagline: string;
   location: string;
   email: string;
-  github: string;
   resumeUrl: string;
   about: string;
   skills: SkillGroup[];
@@ -27,10 +27,10 @@ export interface SiteConfig {
 export const site: SiteConfig = {
   name: '梁火云',
   title: '后端开发工程师',
+  siteBase: '/personal-site',
   tagline: '8 年 C#/.NET 后端开发工程师 · 2024 年下半年起接触 Java · 信创 / 达梦迁移方向',
   location: '重庆',
   email: 'lhyxcqc@qq.com',
-  github: 'https://github.com/yourname', // TODO: 替换为你的 GitHub
   resumeUrl: '/resume.pdf',         // 放置简历 PDF 到 public/resume.pdf
   about:
     '8 年后端开发经验，以 C#/.NET 为主栈，2024 年下半年起接触并实践 Java/Spring Boot。近一年聚焦信创方向，' +
@@ -43,7 +43,6 @@ export const site: SiteConfig = {
     { category: '架构 / 中间件', items: ['微服务', '分布式同步', '消息队列', '信创适配'] },
   ],
   social: [
-    { label: 'GitHub', url: 'https://github.com/yourname' }, // TODO: 替换为你的 GitHub
     { label: 'Email', url: 'mailto:lhyxcqc@qq.com' },
     { label: '微信', url: '#' }, // 后续替换为二维码图片（如 /wechat-qr.png）
   ],

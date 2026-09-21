@@ -3,7 +3,6 @@ import { site } from '../data/site';
 // 联系方式直接以文本展示，不依赖 mailto 等会唤起外部工具的按钮
 const contacts = [
   { label: '邮箱', value: site.email, href: `mailto:${site.email}`, external: false },
-  { label: 'GitHub', value: site.github.replace(/^https?:\/\//, ''), href: site.github, external: true },
   { label: '微信', value: '二维码待补充（后续上传）', href: null, external: false },
 ];
 ---
