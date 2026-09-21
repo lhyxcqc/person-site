@@ -1,0 +1,31 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import { site } from '../data/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title, description } = Astro.props;
+const pageTitle = title ? `${title} · ${site.name}` : `${site.name} · ${site.title}`;
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description ?? site.tagline} />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <Nav />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <footer class="border-t border-slate-200 py-8 text-center text-sm text-slate-500">
+      © {new Date().getFullYear()} {site.name} · 基于 Astro + Tailwind 构建
+    </footer>
+  </body>
+</html>

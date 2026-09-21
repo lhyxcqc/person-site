@@ -1,0 +1,32 @@
+---
+import { site } from '../data/site';
+// 联系方式直接以文本展示，不依赖 mailto 等会唤起外部工具的按钮
+const contacts = [
+  { label: '邮箱', value: site.email, href: `mailto:${site.email}`, external: false },
+  { label: 'GitHub', value: site.github.replace(/^https?:\/\//, ''), href: site.github, external: true },
+  { label: '微信', value: '二维码待补充（后续上传）', href: null, external: false },
+];
+---
+<section id="contact" class="mx-auto max-w-5xl px-6 py-20">
+  <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">联系方式</h2>
+  <p class="mt-4 text-slate-600">欢迎就技术交流或工作机会与我联系。</p>
+  <dl class="mt-6 grid gap-4 sm:grid-cols-3">
+    {contacts.map((c) => (
+      <div class="rounded-lg border border-slate-200 bg-white p-4">
+        <dt class="text-sm text-slate-500">{c.label}</dt>
+        <dd class="mt-1 break-words text-base font-medium text-slate-900">
+          {c.href ? (
+            <a
+              href={c.href}
+              target={c.external ? '_blank' : undefined}
+              rel="noopener"
+              class="text-brand-600 hover:underline"
+            >{c.value}</a>
+          ) : (
+            <span>{c.value}</span>
+          )}
+        </dd>
+      </div>
+    ))}
+  </dl>
+</section>

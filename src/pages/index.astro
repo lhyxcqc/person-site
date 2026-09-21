@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import Skills from '../components/Skills.astro';
+import Contact from '../components/Contact.astro';
+import { getCollection } from 'astro:content';
+import { site } from '../data/site';
+
+const experiences = (await getCollection('experiences')).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+const projects = (await getCollection('projects')).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+---
+<Layout>
+  <Hero />
+  <About about={site.about} />
+  <Experience experiences={experiences} />
+  <Projects projects={projects} />
+  <Skills skills={site.skills} />
+  <Contact />
+</Layout>

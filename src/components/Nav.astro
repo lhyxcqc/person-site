@@ -1,0 +1,24 @@
+---
+import { site } from '../data/site';
+const links = [
+  { href: '#about', label: '关于' },
+  { href: '#experience', label: '经历' },
+  { href: '#projects', label: '项目' },
+  { href: '#skills', label: '技能' },
+  { href: '#contact', label: '联系' },
+];
+---
+<header class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
+  <nav class="mx-auto flex max-w-5xl items-center justify-between px-6 py-3">
+    <a href="#top" class="font-semibold text-slate-900">{site.name}</a>
+    <div class="hidden gap-6 text-sm text-slate-600 sm:flex">
+      {links.map((l) => (
+        <a href={l.href} class="transition hover:text-brand-600">{l.label}</a>
+      ))}
+    </div>
+    <a
+      href={site.resumeUrl}
+      class="rounded-lg bg-brand-600 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-brand-700"
+    >简历</a>
+  </nav>
+</header>
