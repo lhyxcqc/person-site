@@ -4,6 +4,7 @@ summary: 面向大型企业的视频监控综合管理平台（aster.itms-shiyou
 role: 核心开发
 stack: [C#, .NET 6, ASP.NET, MySQL, Redis, RabbitMQ, SignalR, GB28181]
 tags: [视频监控系统, 同步统计, 质量考核 VQD, 事件中心, 性能优化]
+scope: 作为核心开发，负责企业同步统计、视频质量考核 VQD、OSD 归档等核心模块的需求设计、接口开发与日常维护，覆盖点位/区域同步与第三方平台对接（含各功能模块的增删查改）。
 features:
   - name: 企业同步统计
     desc: 按天/概览/汇总统计、存量点位数计算、导出与下级异常筛选

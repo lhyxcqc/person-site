@@ -4,6 +4,7 @@ summary: 后台系统前端模板（Vue3），用于 ZLM 流信息管理等后�
 role: 参与（前端 / 流管理）
 stack: [Vue 3, Vite, TypeScript]
 tags: [前端, Vue3, 流管理, 工程化]
+scope: 参与后台前端模板的 ZLM 流信息管理页面与工程化改造，负责媒体节点配置、表单组件与 CI 优化，并参与流管理相关模块的界面开发与维护。
 features:
   - name: ZLM 流信息管理
     desc: 媒体节点服务器配置、ZLM 模块目录与路由

@@ -4,6 +4,7 @@ summary: 托克托等管网项目的综合集成 API 服务（itos_integrate_api
 role: 参与（数据库兼容）
 stack: [.NET, EFCore, SqlSugar, GBase, MySQL]
 tags: [集成 API, 数据库兼容, 设备接入]
+scope: 参与托克托/管网集成 API 的数据库兼容与事务改造，负责 GBase 建表/视图脚本、关键字兼容等数据库层工作，并参与设备巡检、SNMP 采集与告警上报模块的开发与维护。
 features:
   - name: GBase 数据库兼容
     desc: 建表/视图脚本、rownum 处理、关键字兼容（本人主要提交）

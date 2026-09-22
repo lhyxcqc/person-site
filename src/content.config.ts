@@ -26,6 +26,8 @@ const projects = defineCollection({
     role: z.string(),
     stack: z.array(z.string()).default([]),
     tags: z.array(z.string()).default([]),
+    // 参与概述：一句话概括在该项目中的职责与参与范围（含日常增删查改类工作），不单独列条目
+    scope: z.string().default(''),
     // 功能介绍：项目下的核心模块 / 功能点（点击展开查看）
     features: z
       .array(

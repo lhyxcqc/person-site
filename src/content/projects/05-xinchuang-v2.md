@@ -4,6 +4,7 @@ summary: 微服务化、模块化的信创统一产品（jn.itms.v2），承载 
 role: 核心贡献者
 stack: [Java 17, Spring Boot 3.5, KingBase, Nacos, Redis, ES, RabbitMQ, MinIO]
 tags: [信创, C#→Java, 兼容层, KingBase, 兼容测试]
+scope: 作为核心贡献者，负责 C#→Java 兼容测试基础设施与接口兼容层建设，参与信创数据库对齐与 DTO 中文化，支撑老系统平滑迁移（含模块接口与增删查改改造）。
 features:
   - name: C#→Java 兼容测试基础设施
     desc: CLI、端到端测试、解析+归一化+diff 自动化

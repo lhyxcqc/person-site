@@ -4,6 +4,7 @@ summary: 海油 ITOS 平台的 Java 后端服务（itosbackend-java），负责 
 role: 主力贡献者
 stack: [Java 17, Spring Boot 3.x, JPA, MinIO, Guava, JWT]
 tags: [Spring Boot, AIS 处理, 限流, License, 并发优化]
+scope: 作为主力贡献者，负责 AIS 数据处理、平台侵入告警、License 机制等后端服务的设计与开发，参与多环境兼容与稳定性优化（含业务模块接口与增删查改）。
 features:
   - name: AIS 目标处理
     desc: 距离限制、Guava 限流、变化检测、线程池队列削峰

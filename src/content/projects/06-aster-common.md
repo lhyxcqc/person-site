@@ -4,6 +4,7 @@ summary: 业务无关的基础功能库（aster.sync），通过私有 nuget 发
 role: 核心贡献者
 stack: [C#, .NET, NuGet, FFmpeg, OrmLite, JWT, Redis, GB28181/GB35114]
 tags: [基础库, 中心下载, 推流, OrmLite-DM, JWT]
+scope: 作为核心贡献者，负责基础组件库的中心下载 V2、录像下载、推流、OrmLite 达梦扩展等能力设计与开发，以私有 nuget 支撑多业务系统复用（含各基础能力接口与增删查改）。
 features:
   - name: 中心下载 V2
     desc: ConcurrentDictionary 按平台缓存客户端管理器、Redis 进度回写 DB、TranscodeCfg 跨命名空间冲突与 HTTP/HTTPS 拦截处理

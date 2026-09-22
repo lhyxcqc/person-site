@@ -4,6 +4,7 @@ summary: 将企业视频监控平台整体迁移至达梦（DM）数据库，并
 role: 迁移负责人
 stack: [C#, .NET 6, 达梦 DM, Redis, RabbitMQ, SignalR, OrmLite]
 tags: [信创, 达梦迁移, MySQL→DM, SSO/IAM, 国标资源共享]
+scope: 作为迁移负责人，主导平台 MySQL→达梦迁移与川庆二期交付，负责中心下载 V2、SSO/IAM、国标资源共享等模块的改造、接口开发与联调验证（含相关功能增删查改与数据适配）。
 features:
   - name: 中心录像下载 V2
     desc: 代理地址转换、url 编码、转码配置同步 redis、空配置 bug 修复
