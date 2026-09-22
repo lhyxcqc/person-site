@@ -1,10 +1,10 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
-// 纯静态站，部署到 Gitee Pages（项目页托管在 /personal-site/ 子路径下）
+// 纯静态站，部署到 GitHub Pages（项目页托管在 /person-site/ 子路径下）
 export default defineConfig({
-  site: 'https://lhyxcqc.gitee.io/personal-site',
-  base: '/personal-site',
+  site: 'https://lhyxcqc.github.io/person-site',
+  base: '/person-site',
   vite: {
     plugins: [tailwindcss()],
   },

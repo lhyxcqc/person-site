@@ -27,7 +27,7 @@ export interface SiteConfig {
 export const site: SiteConfig = {
   name: '梁火云',
   title: '后端开发工程师',
-  siteBase: '/personal-site',
+  siteBase: '/person-site',
   tagline: '8 年 C#/.NET 后端开发工程师 · 2024 年下半年起接触 Java · 信创 / 达梦迁移方向',
   location: '重庆',
   email: 'lhyxcqc@qq.com',
