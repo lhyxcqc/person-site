@@ -5,8 +5,11 @@ interface Props {
 }
 const { projects } = Astro.props;
 ---
+
 <section id="projects" class="mx-auto max-w-5xl px-6 py-20">
-  <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">精选项目</h2>
+  <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">项目经历</h2>
+  <p class="mt-3 text-sm text-slate-500">按项目展示，点击卡片可展开查看功能介绍与难点方案。</p>
+
   <div class="mt-10 grid gap-6 md:grid-cols-2">
     {projects.map((p) => (
       <article class="flex flex-col rounded-xl border border-slate-200 bg-white p-6 transition hover:shadow-lg">
@@ -15,12 +18,6 @@ const { projects } = Astro.props;
           <span class="shrink-0 rounded bg-brand-50 px-2 py-0.5 text-xs font-medium text-brand-700">{p.data.role}</span>
         </div>
         <p class="mt-2 text-sm text-slate-600">{p.data.summary}</p>
-
-        <div class="mt-4 space-y-3 text-sm">
-          <p><span class="font-medium text-slate-700">挑战：</span><span class="text-slate-600">{p.data.challenge}</span></p>
-          <p><span class="font-medium text-slate-700">方案：</span><span class="text-slate-600">{p.data.solution}</span></p>
-          <p><span class="font-medium text-slate-700">结果：</span><span class="text-slate-600">{p.data.result}</span></p>
-        </div>
 
         <div class="mt-4 flex flex-wrap gap-2">
           {p.data.tags.map((t) => (
@@ -32,6 +29,40 @@ const { projects } = Astro.props;
             <span class="rounded bg-brand-50 px-2 py-0.5 text-xs text-brand-700">{s}</span>
           ))}
         </div>
+
+        {(p.data.features.length > 0 || p.data.challenge) && (
+          <details class="group mt-5 border-t border-slate-100 pt-4">
+            <summary class="flex cursor-pointer list-none items-center justify-between text-sm font-medium text-brand-600 transition hover:text-brand-700">
+              <span>功能介绍 / 核心功能</span>
+              <span class="transition-transform group-open:rotate-180">▾</span>
+            </summary>
+
+            {p.data.features.length > 0 && (
+              <ul class="mt-4 space-y-3">
+                {p.data.features.map((f) => (
+                  <li class="text-sm">
+                    <span class="font-medium text-slate-800">{f.name}</span>
+                    {f.desc && <span class="text-slate-600">：{f.desc}</span>}
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {(p.data.challenge || p.data.solution || p.data.result) && (
+              <div class="mt-4 space-y-2 border-t border-slate-100 pt-4 text-sm">
+                {p.data.challenge && (
+                  <p><span class="font-medium text-slate-700">难点：</span><span class="text-slate-600">{p.data.challenge}</span></p>
+                )}
+                {p.data.solution && (
+                  <p><span class="font-medium text-slate-700">方案：</span><span class="text-slate-600">{p.data.solution}</span></p>
+                )}
+                {p.data.result && (
+                  <p><span class="font-medium text-slate-700">成果：</span><span class="text-slate-600">{p.data.result}</span></p>
+                )}
+              </div>
+            )}
+          </details>
+        )}
       </article>
     ))}
   </div>

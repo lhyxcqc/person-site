@@ -15,7 +15,9 @@ const experiences = defineCollection({
   }),
 });
 
-// 精选项目：每个项目一个 .md 文件，放在 src/content/projects/
+// 精选项目：每个「项目 / 系统」一个 .md 文件，放在 src/content/projects/
+// 卡片只展示项目级信息（title/summary/role/stack/tags）；
+// 具体的「功能介绍」放在 features 里，由前端折叠展开，点击项目即可查看。
 const projects = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/projects' }),
   schema: z.object({
@@ -23,10 +25,19 @@ const projects = defineCollection({
     summary: z.string(),
     role: z.string(),
     stack: z.array(z.string()).default([]),
-    challenge: z.string(),
-    solution: z.string(),
-    result: z.string(),
     tags: z.array(z.string()).default([]),
+    // 功能介绍：项目下的核心模块 / 功能点（点击展开查看）
+    features: z
+      .array(
+        z.object({
+          name: z.string(),
+          desc: z.string().default(''),
+        }),
+      )
+      .default([]),
+    challenge: z.string().default(''),
+    solution: z.string().default(''),
+    result: z.string().default(''),
     order: z.number().default(0),
   }),
 });
