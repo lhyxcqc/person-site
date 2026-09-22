@@ -1,7 +1,7 @@
 ---
 title: ITMS 信创迁移版 · 川庆二期 + 达梦适配
 summary: 将企业视频监控平台整体迁移至达梦（DM）数据库，并交付专项行业版本（chuanqing-erqi-shiyou-dm），覆盖中心下载、SSO/IAM、国标资源共享。
-role: 第一作者 / 迁移负责人
+role: 迁移负责人
 stack: [C#, .NET 6, 达梦 DM, Redis, RabbitMQ, SignalR, OrmLite]
 tags: [信创, 达梦迁移, MySQL→DM, SSO/IAM, 国标资源共享]
 features:

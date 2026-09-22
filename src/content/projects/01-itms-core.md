@@ -1,7 +1,7 @@
 ---
 title: 企业级视频监控平台 ITMS · 主系统
 summary: 面向大型企业的视频监控综合管理平台（aster.itms-shiyou），负责同步统计、视频质量考核、OSD 归档等核心模块。
-role: 第一作者 / 核心开发
+role: 核心开发
 stack: [C#, .NET 6, ASP.NET, MySQL, Redis, RabbitMQ, SignalR, GB28181]
 tags: [视频监控系统, 同步统计, 质量考核 VQD, 事件中心, 性能优化]
 features:
